@@ -1,0 +1,11 @@
+import cmath
+print ("bitte wert fuer a eingeben")
+a = int(input ())
+print ("bitte wert fuer b eingeben")
+b = int(input ())
+print ("bitte wert fuer c eingeben")
+c = int(input ())
+erste_loesung = ((b*(-1)+ cmath.sqrt(b**2 - 4*a*c))/2/a)
+zweite_loesung = ((b*(-1)- cmath.sqrt(b**2 - 4*a*c))/2/a)
+print ("erste lösung:" , erste_loesung)
+print ("zweite lösung:" , zweite_loesung)
