@@ -14,4 +14,4 @@ for i in range(N):
     pi1 += list1[i]
     pi2 += list2[i]
     pi3 += list3[i]
-    print("{:^5}|{:^10.4f}|{:^10.4f}|{:^10.4f}".format(i, math.fabs(math.pi - pi1), math.fabs(math.pi - pi2), math.fabs(math.pi - pi3)))
+    print("{:^5}|{:^2e}|{:^2e}|{:^2e}".format(i, math.fabs(math.pi - pi1), math.fabs(math.pi - pi2), math.fabs(math.pi - pi3)))
