@@ -27,7 +27,7 @@ print("Geben Sie bitte v_0 ein!")
 v_0 = float(input("v_0:"))
 A=f(x,v_0,y_0,theta)
 
-temp = np.where(A[:] > 0.)[0][0:]
+temp = np.where(A[:] > 0.)[0]#[0:]
 s = len(temp)
 
 splitted = np.split(x,[s])
@@ -39,3 +39,4 @@ plt.plot(x1, f(x1, v_0,y_0,theta))
 plt.plot(x2, f(x2, v_0,y_0,theta),"r-")
 plt.ylabel("Hight of canonball")
 plt.xlabel("time")
+plt.show()

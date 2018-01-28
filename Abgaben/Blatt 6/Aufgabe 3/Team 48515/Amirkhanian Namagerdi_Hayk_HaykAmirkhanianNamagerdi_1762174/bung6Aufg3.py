@@ -1,13 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 n = 100
-l = 0,5
+l = 0.5
 fo = 200
 ul = 42
 ur = 10
 f = [ul]
 for x in range (n-2):
-    dx = x/(n-1)
+    dx = l/(n-1)
     deltax = dx * dx
     f.append(deltax * fo)
 f.append(ur)
@@ -31,7 +31,7 @@ u = np.linalg.solve(C,f)
 print(u)
 z = []
 for i in range (n):
-    z.append(i*deltax)
+    z.append(i*dx)
 plt.plot(u,z)
 plt.show()
 

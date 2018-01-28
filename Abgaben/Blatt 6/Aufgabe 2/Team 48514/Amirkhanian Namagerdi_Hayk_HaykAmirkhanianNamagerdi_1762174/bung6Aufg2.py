@@ -12,4 +12,4 @@ def mm(A,B):
                 c = c + 1
             C.append(e)
     return C
-print (mm([[1,2],[3,4]],[[1,2][3,4]]))
+print (mm([[1,2],[3,4]],[[1,2],[3,4]]))
