@@ -1,0 +1,99 @@
+% Vorlage für ein beamer Dokument
+% Artikelklasse mit Schriftgrße 12, Papierformat: DIN A4, neue deutsche Rechtschreibung:
+\documentclass[12pt,ngerman,a4paper]{beamer}
+
+% Keine Einrückung am Beginn eines Paragraphen
+\setlength{\parindent}{0pt}
+
+% Sprachpacket
+\usepackage{babel}
+
+% Die folgenden drei Packete sind für Umlaute wichtig
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Erweiterungen in der mathematischen Umgebung
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+% Zum Einbinden von Grafiken
+\usepackage{graphicx}
+
+% Zum Einfügen von Links mit \url{...}
+%  außerdem werden automatisch Links für Querverweise eingefügt
+\usepackage{hyperref}
+
+% Benutzerdefinierte Kommandos / Makros
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Rpos}{\ensuremath{\mathbb{R}_{\geq 0}}}
+\newcommand{\norm}[1]{\left\|{#1}\right\|}
+\newcommand{\infnorm}[1]{\norm{#1}_\infty}
+
+% Makro zur Demonstration der Abänderbarkeit
+\newcommand{\A}{A} % setze dazu \newcommand{\A}{A} auf \newcommand{\A}{~}
+
+% Titel, Autor und Datum setzen
+\title{Aufagbe 3}
+\subtitle{des Übungsblattes Nummer 8}
+\date{Februar 2018}
+\author{Philipp Kurz}
+
+% LaTeX beamer Vorlage
+\usetheme{Warsaw}
+
+% Einstellung: Beschriftungen (Tabellen, Abbildungen, etc.) nummerieren
+\setbeamertemplate{caption}[numbered]
+
+% Inhalt des Dokuments
+\begin{document}
+
+% Titel, Autor und Datum ausgeben
+\maketitle
+
+% Inhaltsverzeichnis
+\begin{frame}
+  \tableofcontents{}
+\end{frame}
+
+
+% Abschnitt für Tabellen
+\section{Hier steht eine Tabelle}
+% Neue Folie für Tabellen
+\begin{frame}{Tabellen erstellen}
+So sieht eine Tabelle in Latex aus:
+
+% Eine Tabelle
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l||r|}
+    \hline
+    \textbf{Uberschrift Spalte 1}             & \textbf{Überschrift Spalte 2}\\
+    \hline
+    Spalte 1, Zeile 1	               & Spalte 2, Zeile 1\\
+    \hline
+    Spalte 1, Zeile 2               & Spalte 2, Zeile 2\\
+    \hline
+  \end{tabular}
+  \caption{Beispieltabelle}
+  \label{tab:Tabellen:HHGGDarsteller}
+\end{table}
+\end{frame}
+
+% Abschnitt für Querverweise und Auflistungen
+\section{Querverweise und Auflistungen}\label{sec:QuerverweiseUndAuflistungen}
+% Neue Folie für Querverweise und Auflistungen
+\begin{frame}{Querverweise und Auflistungen}
+In diesem Abschnitt demonstrieren wir, wie Querverweise und Aufzählungen funktionieren. Dazu listen wir hier die Querverweise aus diesem Dokument in zwei Listen auf:
+\begin{itemize}
+  \item Tabelle \ref{tab:Tabellen:HHGGDarsteller},
+  \item Abbildung~\ref{fig:Makros:Aenderbarkeit:MagicASCII},
+  \item Abbildung~\ref{fig:Grafiken:Standardbild}.
+\end{itemize}
+Hier werden alle Gleichungen noch einmal referenziert:
+\begin{enumerate}
+  \item Gleichung~\ref{eq:Formeln:Wurzel} oder \eqref{eq:Formeln:Wurzel},
+  \item Gleichung~\ref{eq:Formeln:Gauss} oder \eqref{eq:Formeln:Gauss}.
+\end{enumerate}
+\end{frame}
+
+\end{document}
